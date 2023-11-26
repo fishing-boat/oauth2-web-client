@@ -9,7 +9,7 @@ const App = () => {
   const authenticate = async () => {
     const code = searchParams.get('code');
     axios
-      .post('https://4ce2eof4f3.execute-api.ap-northeast-2.amazonaws.com/authenticate', { code })
+      .post('https://4ce2eof4f3.execute-api.ap-northeast-2.amazonaws.com/api/v1/auth', { code })
       .then((response) => {
         console.log('Server response:', response.data);
         setAuthStatus('success'); // 인증 성공 시 상태를 'success'로 설정
