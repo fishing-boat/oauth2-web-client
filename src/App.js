@@ -20,7 +20,12 @@ const App = () => {
   })
 
   const authenticate = async () => {
+<<<<<<< HEAD
     const code = searchParams.get('code')
+=======
+    console.log(searchParams);
+    const code = searchParams.get('code');
+>>>>>>> affcb8b (.)
     axios
       .post('https://external-api.daepyo.org/api/v1/auth', { code, platform: 'WEB' })
       .then((response) => {
